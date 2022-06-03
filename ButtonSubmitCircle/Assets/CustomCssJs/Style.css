@@ -1,0 +1,85 @@
+/************************************************************************/ /* Start Style All */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI;
+  user-select: none;
+}
+/************************************************************************/ /* End Style All */
+
+/************************************************************************/ /* Start Style Button Submit Circle */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button_submit_circle {
+  position: relative;
+  width: 300px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #77e2d5;
+  color: #222;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 1000px;
+  cursor: pointer;
+  box-shadow: 10px 10px 20px #77e2d5;
+  transition: all 0.5s;
+}
+
+.button_submit_circle:hover {
+  box-shadow: 0px 0px 100px #00ffe1;
+  top: -5px;
+}
+
+.button_submit_circle:hover .section_circle_button_submit_circle {
+  animation: none;
+  border: none;
+}
+
+.button_submit_circle:hover .section_border_button_submit_circle {
+  opacity: 1;
+}
+
+.section_circle_button_submit_circle {
+  position: absolute;
+  border-radius: 1000px;
+  border: 5px solid #77e2d5;
+  background-color: transparent;
+  animation: SetCircle 2s infinite;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+@keyframes SetCircle {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+.section_border_button_submit_circle {
+  position: absolute;
+  width: 330px;
+  height: 90px;
+  background-color: transparent;
+  border: 8px solid #00ffe1;
+  border-radius: 1000px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+/************************************************************************/ /* End Style Button Submit Circle */
